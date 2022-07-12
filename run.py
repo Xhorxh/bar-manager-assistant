@@ -36,6 +36,29 @@ def input_sales_data():
     return sales_data
 
 
+def input_order_data():
+    """
+    Get order figures input from the user.
+    Run a while loop to collect a valid string of data from the user
+    vie the terminal, which must be a string of 8 numbers separated
+    by commmas. The loop will repeatedly request data, until it is valid.
+    """
+    while True:
+
+        print('Please enter last order data.')
+        print('Data should be eight (8) numbers, separated by commas.')
+        print('Example: 10,20,30,40,50,60,70,80\n')
+
+        data_str = input('Enter your data here: ')
+
+        order_data = data_str.split(',')
+
+        if validate_data(order_data):
+            print('Data is valid')
+            break
+    return order_data
+
+
 def validate_data(values):
     """
     Inside the try, converts all string values into integers.
@@ -62,6 +85,9 @@ def update_sales_worksheet(data):
     print('Updating sales worksheet...\n')
     sales_worksheet = SHEET.worksheet('sales')
     sales_worksheet.append_row(data)
+
+
+input_order_data()
 
 
 def main():
