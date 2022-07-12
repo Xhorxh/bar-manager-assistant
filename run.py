@@ -87,13 +87,22 @@ def update_sales_worksheet(data):
     sales_worksheet.append_row(data)
 
 
-input_order_data()
+def update_order_worksheet(orders):
+    """
+    Update sales worksheet, add new row with the list data provided.
+    """
+    print('Updating order worksheet...\n')
+    order_worksheet = SHEET.worksheet('order')
+    order_worksheet.append_row(orders)
 
 
 def main():
     """
     Run all program functions
     """
+    orders = input_order_data()
+    order_data = [int(num) for num in orders]
+    update_order_worksheet(order_data)
     data = input_sales_data()
     sales_data = [int(num) for num in data]
     update_sales_worksheet(sales_data)
