@@ -1,3 +1,4 @@
+from pprint import pprint
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -89,17 +90,28 @@ def update_sales_worksheet(data):
 
 def update_order_worksheet(orders):
     """
-    Update sales worksheet, add new row with the list data provided.
+    Update order worksheet, add new row with the list data provided.
     """
     print('Updating order worksheet...\n')
     order_worksheet = SHEET.worksheet('order')
     order_worksheet.append_row(orders)
 
 
+def show_stock_worksheet():
+    """
+    Shows the stock worksheet in the terminal
+    """
+    print('Showing the Stock worksheet...')
+    stock = SHEET.worksheet('stock').get_all_values()
+    pprint(stock)
+
+
 def main():
     """
     Run all program functions
     """
+    show_stock_worksheet()
+
     orders = input_order_data()
     order_data = [int(num) for num in orders]
     update_order_worksheet(order_data)
