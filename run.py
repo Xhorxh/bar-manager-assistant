@@ -106,11 +106,21 @@ def show_stock_worksheet():
     pprint(stock)
 
 
+def show_order_worksheet():
+    """
+    Shows the order worksheet in the terminal
+    """
+    print('Showing the Order worksheet...')
+    order = SHEET.worksheet('order').get_all_values()
+    pprint(order)
+
+
 def main():
     """
     Run all program functions
     """
     show_stock_worksheet()
+    show_order_worksheet()
 
     orders = input_order_data()
     order_data = [int(num) for num in orders]
