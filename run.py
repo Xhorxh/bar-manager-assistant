@@ -227,6 +227,15 @@ def selection_four():
     menu()
 
 
+def selection_five():
+    """
+    Calls the functions for the fifth option from the menu
+    """
+    show_sales_worksheet()
+    print('If you would like to do something else choose from the list below')
+    menu()
+
+
 def main():
     """
     Run all program functions 
