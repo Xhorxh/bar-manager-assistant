@@ -274,4 +274,6 @@ def menu():
         menu()
 
 
-menu()        
+print('Welcome to Bar-Manager assistant\n')
+print('------------------------------------------------')
+menu()
