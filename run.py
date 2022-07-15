@@ -181,12 +181,25 @@ def leave_application():
     """ 
     Exit the application and gives a thanks messagge
     """
-    print('Thanks for using Bar-Manager assistant')    
+    print('Thanks for using Bar-Manager assistant')
+
+
+def selection_one():
+    """
+    Calls the functions for the first option from the menu
+    """
+    data = input_sales_data()
+    sales_data = [int(num) for num in data]
+    update_sales_worksheet(sales_data)
+    saled_stock = calculate_stock_after_sales()
+    update_stocks_worksheet(saled_stock)
+    print('If you would like to do something else choose from the list below')
+    menu()
 
 
 def main():
     """
-    Run all program functions
+    Run all program functions 
     """
     show_stock_worksheet()
     show_order_worksheet()
@@ -195,13 +208,10 @@ def main():
     orders = input_order_data()
     order_data = [int(num) for num in orders]
     update_order_worksheet(order_data)
-    data = input_sales_data()
-    sales_data = [int(num) for num in data]
-    update_sales_worksheet(sales_data)
+    
     ordered_stock = calculate_stock_after_orders()
     update_stock_worksheet(ordered_stock)
-    saled_stock = calculate_stock_after_sales()
-    update_stocks_worksheet(saled_stock)
+    
     # menu
 
 
