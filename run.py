@@ -78,6 +78,7 @@ def update_sales_worksheet(data):
     print('Updating sales worksheet...\n')
     sales_worksheet = SHEET.worksheet('sales')
     sales_worksheet.append_row(data)
+    print('Sales worksheet updated successfully.\n')
 
 
 def update_order_worksheet(orders):
@@ -87,6 +88,7 @@ def update_order_worksheet(orders):
     print('Updating order worksheet...\n')
     order_worksheet = SHEET.worksheet('order')
     order_worksheet.append_row(orders)
+    print('Order worksheet updated successfully.\n')
 
 
 def calculate_stock_after_orders():
@@ -112,6 +114,7 @@ def update_stock_worksheet(ordered_stock):
     stock_worksheet = SHEET.worksheet('stock')
     stock_worksheet.delete_rows(2)
     stock_worksheet.append_row(ordered_stock)
+    print('Stock worksheet updated automatically.\n')
 
 
 def convert_units():
@@ -149,6 +152,7 @@ def update_stocks_worksheet(saled_stock):
     stock_worksheet = SHEET.worksheet('stock')
     stock_worksheet.delete_rows(2)
     stock_worksheet.append_row(saled_stock)
+    print('Stock worksheet updated automatically.\n')
 
 
 def show_stock_worksheet():
