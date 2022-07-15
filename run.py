@@ -211,7 +211,18 @@ def selection_two():
 
 
 def selection_three():
+    """ Calls the functions for the third option from the menu
+    """
     show_stock_worksheet()
+    print('If you would like to do something else choose from the list below')
+    menu()
+
+
+def selection_four():
+    """
+    Calls the functions for the fourth option from the menu
+    """
+    show_order_worksheet()
     print('If you would like to do something else choose from the list below')
     menu()
 
@@ -221,7 +232,7 @@ def main():
     Run all program functions 
     """
     
-    show_order_worksheet()
+    
     show_sales_worksheet()
 
 
