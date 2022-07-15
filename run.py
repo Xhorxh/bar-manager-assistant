@@ -1,3 +1,4 @@
+"""import PrettyPrinter module"""
 from pprint import pprint
 import gspread
 from google.oauth2.service_account import Credentials
@@ -18,7 +19,7 @@ def input_sales_data():
     """
     Get sales figures input from the user.
     Run a while loop to collect a valid string of data from the user
-    vie the terminal, which must be a string of 8 numbers separated
+    via the terminal, which must be a string of 8 numbers separated
     by commmas. The loop will repeatedly request data, until it is valid.
     """
     while True:
@@ -37,7 +38,7 @@ def input_order_data():
     """
     Get order figures input from the user.
     Run a while loop to collect a valid string of data from the user
-    vie the terminal, which must be a string of 8 numbers separated
+    via the terminal, which must be a string of 8 numbers separated
     by commmas. The loop will repeatedly request data, until it is valid.
     """
     while True:
@@ -156,7 +157,7 @@ def show_stock_worksheet():
     """
     print('Showing the Stock worksheet...')
     stock = SHEET.worksheet('stock').get_all_values()
-    pprint(stock)
+    print(stock)
 
 
 def show_order_worksheet():
@@ -193,7 +194,7 @@ def selection_one():
     update_sales_worksheet(sales_data)
     saled_stock = calculate_stock_after_sales()
     update_stocks_worksheet(saled_stock)
-    print('If you would like to do something else choose from the list below')
+    print('If you would like to do something else choose from the list below:')
     menu()
 
 
@@ -206,7 +207,7 @@ def selection_two():
     update_order_worksheet(order_data)
     ordered_stock = calculate_stock_after_orders()
     update_stock_worksheet(ordered_stock)
-    print('If you would like to do something else choose from the list below')
+    print('If you would like to do something else choose from the list below:')
     menu()
 
 
@@ -215,7 +216,7 @@ def selection_three():
      Calls the functions for the third option from the menu
     """
     show_stock_worksheet()
-    print('If you would like to do something else choose from the list below')
+    print('If you would like to do something else choose from the list below:')
     menu()
 
 
@@ -224,7 +225,7 @@ def selection_four():
     Calls the functions for the fourth option from the menu
     """
     show_order_worksheet()
-    print('If you would like to do something else choose from the list below')
+    print('If you would like to do something else choose from the list below:')
     menu()
 
 
@@ -233,7 +234,7 @@ def selection_five():
     Calls the functions for the fifth option from the menu
     """
     show_sales_worksheet()
-    print('If you would like to do something else choose from the list below')
+    print('If you would like to do something else choose from the list below:')
     menu()
 
 
