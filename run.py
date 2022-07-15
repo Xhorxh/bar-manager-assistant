@@ -22,15 +22,11 @@ def input_sales_data():
     by commmas. The loop will repeatedly request data, until it is valid.
     """
     while True:
-
         print('Please enter sales data from the last market day.')
         print('Data should be eight (8) numbers, separated by commas.')
         print('Example: 10,20,30,40,50,60,70,80\n')
-
         data_str = input('Enter your data here: ')
-
         sales_data = data_str.split(',')
-
         if validate_data(sales_data):
             print('Data is valid')
             break
@@ -45,15 +41,11 @@ def input_order_data():
     by commmas. The loop will repeatedly request data, until it is valid.
     """
     while True:
-
         print('Please enter last order data.')
         print('Data should be eight (8) numbers, separated by commas.')
         print('Example: 10,20,30,40,50,60,70,80\n')
-
         data_str = input('Enter your data here: ')
-
         order_data = data_str.split(',')
-
         if validate_data(order_data):
             print('Data is valid')
             break
@@ -75,7 +67,6 @@ def validate_data(values):
     except ValueError as e:
         print(f'Invalid data: {e}, please try again.\n')
         return False
-
     return True
 
 
@@ -95,6 +86,20 @@ def update_order_worksheet(orders):
     print('Updating order worksheet...\n')
     order_worksheet = SHEET.worksheet('order')
     order_worksheet.append_row(orders)
+
+
+def calculate_stock_after_orders():
+    """
+    Calculates Stock after inputing orders
+    """
+    order = SHEET.worksheet('order').get_all_values()
+    last_order = order[-1]
+    last_order = [int(i) for i in last_order]
+    stock = SHEET.worksheet('stock').get_all_values()
+    new_stock = stock[-1]
+    new_stock = [float(i) for i in new_stock]
+    ordered_stock = [sum(i) for i in zip(last_order, new_stock)]
+    return ordered_stock
 
 
 def show_stock_worksheet():
