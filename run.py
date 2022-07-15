@@ -178,8 +178,8 @@ def show_sales_worksheet():
 
 
 def leave_application():
-    """ 
-    Exit the application and gives a thanks messagge
+    """
+    Exit the program and displays a thanks message
     """
     print('Thanks for using Bar-Manager assistant')
 
@@ -242,12 +242,12 @@ def selection_zero():
     Calls the functions for the last option from the menu
     """
     leave_application()
-    print('------------------------------------------------')    
+    print('------------------------------------------------')
 
 
 def menu():
     """
-    Gives the posibility to the user to choose what option to use 
+    Gives the posibility to the user to choose what option to use
     """
     print('1. Input the last market day sales')
     print('2. Input last orders')
