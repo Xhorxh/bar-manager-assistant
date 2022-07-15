@@ -26,7 +26,7 @@ def input_sales_data():
         print('Please enter sales data from the last market day.')
         print('Data should be eight (8) numbers, separated by commas.')
         print('Example: 10,20,30,40,50,60,70,80\n')
-        data_str = input('Enter your data here: ')
+        data_str = input('Enter your data here:\n')
         sales_data = data_str.split(',')
         if validate_data(sales_data):
             print('Data is valid')
@@ -45,7 +45,7 @@ def input_order_data():
         print('Please enter last order data.')
         print('Data should be eight (8) numbers, separated by commas.')
         print('Example: 10,20,30,40,50,60,70,80\n')
-        data_str = input('Enter your data here: ')
+        data_str = input('Enter your data here:\n ')
         order_data = data_str.split(',')
         if validate_data(order_data):
             print('Data is valid')
@@ -159,7 +159,7 @@ def show_stock_worksheet():
     """
     Shows the stock worksheet in the terminal
     """
-    print('Showing the Stock worksheet...')
+    print('Showing the Stock worksheet...\n')
     stock = SHEET.worksheet('stock').get_all_values()
     print(stock)
 
@@ -168,7 +168,7 @@ def show_order_worksheet():
     """
     Shows the order worksheet in the terminal
     """
-    print('Showing the Order worksheet...')
+    print('Showing the Order worksheet...\n')
     order = SHEET.worksheet('order').get_all_values()
     pprint(order)
 
@@ -177,7 +177,7 @@ def show_sales_worksheet():
     """
     Shows the sales worksheet in the terminal
     """
-    print('Showing the Sales worksheet...')
+    print('Showing the Sales worksheet...\n')
     sales = SHEET.worksheet('sales').get_all_values()
     pprint(sales)
 
@@ -186,7 +186,7 @@ def leave_application():
     """
     Exit the program and displays a thanks message
     """
-    print('Thanks for using Bar-Manager assistant')
+    print('Thanks for using Bar-Manager assistant.')
 
 
 def selection_one():
@@ -262,7 +262,7 @@ def menu():
             print('4. See the Order worksheet')
             print('5. See the Sale worksheet')
             print('0. Exit\n')
-            selection = int(input('Enter a number from the list above:'))
+            selection = int(input('Enter a number from the list above:\n'))
             if selection == 1:
                 selection_one()
                 break
