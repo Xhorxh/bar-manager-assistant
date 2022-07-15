@@ -199,3 +199,35 @@ def main():
 
 
 main()
+
+
+def menu():
+    """
+    Gives the posibility to the user to choose what option to use 
+    """
+    print('1. Input the last market day sales')
+    print('2. Input last orders')
+    print('3. See the Stock worksheet')
+    print('4. See the Order worksheet')
+    print('5. See the Sale worksheet')
+    print('0. Exit\n')
+    selection = int(input('Type one of the numbers above and press Enter: '))
+    print('------------------------------------------------')
+    if selection == 1:
+        selection_one()
+    elif selection == 2:
+        selection_two()
+    elif selection == 3:
+        selection_three()
+    elif selection == 4:
+        selection_four()
+    elif selection == 5:
+        selection_five()
+    elif selection == 0:
+        selection_zero()
+    else:
+        print('Invalid entry. Enter a number form 0 to 5')
+        menu()
+
+
+menu()        
