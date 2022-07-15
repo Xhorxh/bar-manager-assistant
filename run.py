@@ -236,21 +236,6 @@ def selection_five():
     menu()
 
 
-def main():
-    """
-    Run all program functions 
-    """
-    
-    
-    show_sales_worksheet()
-
-
-    # menu
-
-
-main()
-
-
 def menu():
     """
     Gives the posibility to the user to choose what option to use 
