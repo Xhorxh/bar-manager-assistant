@@ -116,7 +116,7 @@ def update_stock_worksheet(ordered_stock):
 def convert_units():
     """
     Takes the last market day sales and converts the sales units in stock
-    and order units 
+    and order units
     """
     sales = SHEET.worksheet('sales').get_all_values()
     last_sales = sales[-1]
@@ -124,7 +124,19 @@ def convert_units():
     converter = [0.008, 0.266, 0.266, 0.04, 0.04, 0.04, 0.04, 0.04]
     converter = [float(i) for i in converter]
     converted_sales = [i1 * i2 for i1, i2 in zip(last_sales, converter)]
-    return converted_sales    
+    return converted_sales
+
+
+def calculate_stock_after_sales():
+    """
+    Calculates remained stocks after the last market day
+    """
+    stock = SHEET.worksheet('stock').get_all_values()
+    new_stock = stock[-1]
+    converted_sales = convert_units()
+    new_stock = [float(i) for i in new_stock]
+    sold_stocks = [i1 - i2 for i1, i2 in zip(new_stock, converted_sales)]
+    return sold_stocks
 
 
 def show_stock_worksheet():
