@@ -210,11 +210,17 @@ def selection_two():
     menu()
 
 
+def selection_three():
+    show_stock_worksheet()
+    print('If you would like to do something else choose from the list below')
+    menu()
+
+
 def main():
     """
     Run all program functions 
     """
-    show_stock_worksheet()
+    
     show_order_worksheet()
     show_sales_worksheet()
 
