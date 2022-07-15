@@ -197,6 +197,19 @@ def selection_one():
     menu()
 
 
+def selection_two():
+    """
+    Calls the functions for the second option from the menu
+    """
+    orders = input_order_data()
+    order_data = [int(num) for num in orders]
+    update_order_worksheet(order_data)
+    ordered_stock = calculate_stock_after_orders()
+    update_stock_worksheet(ordered_stock)
+    print('If you would like to do something else choose from the list below')
+    menu()
+
+
 def main():
     """
     Run all program functions 
@@ -205,13 +218,7 @@ def main():
     show_order_worksheet()
     show_sales_worksheet()
 
-    orders = input_order_data()
-    order_data = [int(num) for num in orders]
-    update_order_worksheet(order_data)
-    
-    ordered_stock = calculate_stock_after_orders()
-    update_stock_worksheet(ordered_stock)
-    
+
     # menu
 
 
