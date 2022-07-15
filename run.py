@@ -139,6 +139,17 @@ def calculate_stock_after_sales():
     return sold_stocks
 
 
+def update_stocks_worksheet(saled_stock):
+    """
+    This function will delete the existing row form the stock worksheet
+    and append the updated row
+    """
+    print('Updating stock worksheet...\n')
+    stock_worksheet = SHEET.worksheet('stock')
+    stock_worksheet.delete_rows(2)
+    stock_worksheet.append_row(saled_stock)
+
+
 def show_stock_worksheet():
     """
     Shows the stock worksheet in the terminal
@@ -182,6 +193,8 @@ def main():
     update_sales_worksheet(sales_data)
     ordered_stock = calculate_stock_after_orders()
     update_stock_worksheet(ordered_stock)
+    saled_stock = calculate_stock_after_sales()
+    update_stocks_worksheet(saled_stock)
     # menu
 
 
