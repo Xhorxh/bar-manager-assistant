@@ -211,7 +211,8 @@ def selection_two():
 
 
 def selection_three():
-    """ Calls the functions for the third option from the menu
+    """
+     Calls the functions for the third option from the menu
     """
     show_stock_worksheet()
     print('If you would like to do something else choose from the list below')
@@ -234,6 +235,14 @@ def selection_five():
     show_sales_worksheet()
     print('If you would like to do something else choose from the list below')
     menu()
+
+
+def selection_zero():
+    """
+    Calls the functions for the last option from the menu
+    """
+    leave_application()
+    print('------------------------------------------------')    
 
 
 def menu():
