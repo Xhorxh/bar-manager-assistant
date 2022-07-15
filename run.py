@@ -177,6 +177,13 @@ def show_sales_worksheet():
     pprint(sales)
 
 
+def leave_application():
+    """ 
+    Exit the application and gives a thanks messagge
+    """
+    print('Thanks for using Bar-Manager assistant')    
+
+
 def main():
     """
     Run all program functions
