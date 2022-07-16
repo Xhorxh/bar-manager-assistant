@@ -4,7 +4,7 @@
 
 This project is meant to be a helpful tool for Bars or Restaurants managers. It gives the possibility to keep records very easily in a spreadsheet. It is also very helpful for the inventory process and to fight a disturbing phenomenon as 'off record sales'.
 
-![responsive ](./images/amiresponsive.PNG)  
+![Mockup](./images/amiresponsive.jpg)  
 
 ## My Goals For This Project:
 
@@ -20,7 +20,7 @@ This project is meant to be a helpful tool for Bars or Restaurants managers. It 
 As the program starts the user is presented with a welcome message, a list of options (menu) to choose from, and of course a brief instruction.
 The user simply has to enter relevant numbers and press enter. After each option is used, the user can choose again from the menu.  
 If the user chooses to exit the program, a goodbye message is printed and the program ends.
-![start up](./images/program_start.PNG) 
+![Program start](./images/menu.jpg) 
 
 ## Features
 
@@ -39,7 +39,7 @@ If the user chooses to exit the program, a goodbye message is printed and the pr
 ## Planning
 
 To plan this project I created a flow chart to help visualise the process of the project. It was also very helpful for seeing what functions I would need and where to implement them. But as coding along, I found out that this aproach would be very confusing for the user. The user doesn't have to go through all options every time, so i decided that a menu would fit perfectly(learning by doing type).
-![flow](./images/planning-flowchart.png)
+![Flowchart](images/flowchart-planning.jpg)
 
 ## Testing
 
@@ -52,6 +52,7 @@ I have manually tested this project by:
 
 PEP8:
 * Ran through pep8online.com with no issues
+![PEP8 check](./images/pep8.jpg)
 
 ## Bugs
 
