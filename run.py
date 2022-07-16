@@ -43,6 +43,7 @@ def input_order_data():
         print('Please enter last order data.')
         print('Data should be eight (8) numbers, separated by commas.')
         print('Example: 10,20,30,40,50,60,70,80\n')
+        print('Beer--> nr of kegs, and other article--> nr of bottles\n')
         data_str = input('Enter your data here:\n ')
         order_data = data_str.split(',')
         if validate_data(order_data):
