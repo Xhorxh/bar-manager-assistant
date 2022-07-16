@@ -1,5 +1,3 @@
-"""import PrettyPrinter module"""
-from pprint import pprint
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -170,7 +168,7 @@ def show_order_worksheet():
     """
     print('Showing the Order worksheet...\n')
     order = SHEET.worksheet('order').get_all_values()
-    pprint(order)
+    print(order)
 
 
 def show_sales_worksheet():
@@ -179,7 +177,7 @@ def show_sales_worksheet():
     """
     print('Showing the Sales worksheet...\n')
     sales = SHEET.worksheet('sales').get_all_values()
-    pprint(sales)
+    print(sales)
 
 
 def leave_application():
